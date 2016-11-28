@@ -64,7 +64,12 @@ module.exports = {
       friendlyName: 'From (name)',
       description: 'Full name of the sender.',
       example: 'Harold Greaseworthy'
-    }
+    },
+    
+     headers: {
+      description:  'An object or array of additional header fields',
+      example:  '{"X-Key-Name": "key value"} or [{key: "X-Key-Name", value: "val1"}, {key: "X-Key-Name", value: "val2"}])'
+    },
 
   },
 
@@ -107,6 +112,7 @@ module.exports = {
       to: recipients,
       subject: inputs.subject||'Hello world!',
       text: inputs.message||' ',
+      headers: inputs.headers || [],
       // attachment: attch
     };
 
