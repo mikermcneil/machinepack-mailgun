@@ -68,7 +68,8 @@ module.exports = {
     
      headers: {
       description:  'An object or array of additional header fields',
-      example:  '{"X-Key-Name": "key value"} or [{key: "X-Key-Name", value: "val1"}, {key: "X-Key-Name", value: "val2"}])'
+      example:  '[{key: "X-Key-Name", value: "val1"}, {key: "X-Key-Name", value: "val2"}]',
+      typeclass: 'array'
     },
 
   },
