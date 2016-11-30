@@ -66,7 +66,13 @@ module.exports = {
     fromName: {
       description: 'Full name of the sender.',
       example: 'Harold Greaseworthy'
-    }
+    },
+    
+    headers: {
+      description:  'An object or array of additional header fields',
+      example:  '[{key: "X-Key-Name", value: "val1"}, {key: "X-Key-Name", value: "val2"}]',
+      typeclass: 'array'
+    },
   },
 
 
@@ -118,7 +124,8 @@ module.exports = {
       to: to,
       subject: inputs.subject || 'Hello',
       body: inputs.textMessage || '',
-      html: inputs.htmlMessage || ''
+      html: inputs.htmlMessage || '',
+      headers: inputs.headers || [],
     });
 
     // Create the email payload.
